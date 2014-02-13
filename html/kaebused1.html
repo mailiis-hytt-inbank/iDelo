@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iDelo</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <script src="../js/jquery-2.1.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.paginate.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.simplePagination.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $.ajax({
+        url:"../js/data.json",
+        dataTypr:"json",
+        async:false
+      }).responseText;
+        $.getJSON('../js/data.json', function(data) {
+            console.log(data);
+        });
+    });
+    </script>
+    <nav class="navbar navbar-default .navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">iDelo</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="kaebused.html">Kaebused</a></li>
+            <li><a href="#">Otsing</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seaded <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li class="divider"></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <li><a href="#">Logi välja</a></li>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="bs-header" id="content">
+    </div>
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div id="listitems-pagination" style="display:none">
+          <a id="listitems-previous" href="#" class="disabled">&laquo; Previous</a>
+          <a id="listitems-next" href="#">Next &raquo;</a>
+        </div>
+        <div class="list-group col-md-8 col-md-offset-2">
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">Tööinspektsioon sai mullu 17 kaebust ebavõrdse kohtlemise kohta</h4>
+            <p class="list-group-item-text">
+              Kuuel korral kaebaja nõuet ei rahuldatud, kolmel korral menetlus lõpetati. Kaebus rahuldati viiel korral. Osaliselt rahuldati nõue ühel korral ning üks nõue on endiselt menetluses.
+
+              Näiteks leidis eelmisel aastal leidis aset juhtum, kus pärast nelja ja poole aasta pikkust lapsehoolduspuhkust tööle naasnud inimene koondati samal päeval.
+
+              Inimene pöördus töövaidluskomisjoni poole, et seal tuvastataks, kas teda on sooliselt diskrimineeritud lapsevanemaks olemise ning perekondlike kohustuste täitmise tõttu.
+            </p>
+          </a> 
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">Lugejat ehmatas Maksimarketis müügil olev juust</h4>
+            <p class="list-group-item-text">
+              «Tartu Tarbijate Kooperatiiv on pöördunud tootja poole, et saada nendepoolne selgitus,» kinnitas Lember, kes ühtlasi palus vabandust ka tarbija ees ning palus edaspidi ebakvaliteetse kauba leidmisest teavitada kaupluse personali.
+
+              Eesti Juustu tootja Estover selgitas, et müügiesindaja külastas kauplust ning toimetas praaktoote ettevõtteni.
+            </p>
+          </a> 
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">Kümme Itaalia delikatessi, mida välismaalased ei suuda süüa</h4>
+            <p class="list-group-item-text">
+              Paljud turistid peavad Itaalia kööki peamiseks riigi külastamise põhjuseks, kuid mitte kõik sealsed hõrgutised ei sobi nõrganärvilistele välismaalastele.
+
+              Tuntud Itaalia köögi lemmikute kõrval võid menüüs kohata toite, mida sa ei tunne ja võib-olla on parem, kui sa ka ei küsi nende kohta, kirjutab The Local.
+            </p>
+          </a>   
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+            <li><a href="kaebused2.html">2</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
