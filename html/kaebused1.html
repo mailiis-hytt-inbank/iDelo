@@ -11,16 +11,16 @@
     <script src="../js/jquery.paginate.min.js"></script>
     <script type="text/javascript" src="../js/jquery.simplePagination.min.js"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
-      $.ajax({
-        url:"../js/data.json",
-        dataTypr:"json",
-        async:false
-      }).responseText;
-        $.getJSON('../js/data.json', function(data) {
-            console.log(data);
-        });
-    });
+    // $(document).ready(function() {
+    //   $.ajax({
+    //     url:"../js/data.json",
+    //     dataTypr:"json",
+    //     async:false
+    //   }).responseText;
+    //     $.getJSON('../js/data.json', function(data) {
+    //         console.log(data);
+    //     });
+    // });
     </script>
     <nav class="navbar navbar-default .navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="kaebused.html">Kaebused</a></li>
-            <li><a href="#">Otsing</a></li>
+            <li><a href="otsing.html">Otsing</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -92,7 +92,7 @@
             </p>
           </a>   
         </div>
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-2 col-md-offset-5">
           <ul class="pagination">
             <li><a href="#">&laquo;</a></li>
             <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
