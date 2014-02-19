@@ -1,0 +1,14 @@
+#map_canvas {
+  width: 500px;
+  height: 400px;
+  background-color: #CCC;
+}
+.guilty-pics{
+  max-width: 45%;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.footer{
+  height: 25px;
+}

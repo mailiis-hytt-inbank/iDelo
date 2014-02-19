@@ -3,50 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>iDelo</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
+    <link href="../css/bootstrap.css" rel="stylesheet"> 
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <nav class="navbar navbar-default .navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+    <header class="navbar navbar-static-top bs-docs-nav" role="banner">
+      <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="main.html">iDelo</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="kaebused.html">Kaebused</a></li>
-            <li><a href="otsing.html">Otsing</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seaded <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li class="divider"></li>
-                <li><a href="#"></a></li>
-              </ul>
-              <li><a href="#">Logi välja</a></li>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-     <div class="bs-header" id="content">
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="kaebused.html">Kaebused</a></li>
+              <li><a href="otsing.html">Otsing</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Seaded</b></a></li>
+              <li><a href="log_in.html">Logi välja</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+       </header>
+       <div class="bs-docs-header" id="content">
+         <div class="container col-md-8 col-md-offset-1">
+           <h1>Kaebused</h1>       
+         </div>  
+       </div>
+    <div class="bs-header" id="content" style="margin: 5%">
+
     </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search">
+    <div class="row">
+      <div class="container bs-docs-container">
+        <div class="col-md-8 col-md-offset-2">
+          
+        </div>
+      </div>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
   </body>
 </html>

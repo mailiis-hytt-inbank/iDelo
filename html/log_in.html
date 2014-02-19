@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iDelo</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+    <script src="../js/jquery-2.1.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('input').val(null);
+      });
+      $('.login').on('click', function(event){
+        event.preventDefault();
+      })
+    </script>
+    <div class="bs-header" id="content" style="margin: 5%"/>
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6">
+          <form class="form-horizontal" action="main.html" role="form">
+            <div class="form-group  col-sm-8">
+              <label for="inputEmail3" class="col-sm-3 control-label">E-mail</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group col-sm-8">
+              <label for="inputPassword3" class="col-sm-3 control-label">Parool</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Jäta mind meelde
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Logi sisse</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

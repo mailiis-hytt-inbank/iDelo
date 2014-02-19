@@ -1,0 +1,97 @@
+<!-- kaebused, mis kasutaja on esitanud konkreetse kasutaja kohta -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iDelo</title>
+  </head>
+  <body>
+    <link href="../css/bootstrap.css" rel="stylesheet"/>
+    <script src="../js/jquery-2.1.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-paginator.min.js"></script>
+    <script type="text/javascript">
+      var listItems = [];
+      $(function() {
+        var options = {
+          currentPage: 1,
+          totalPages: 10,
+          size: 'normal'
+        }
+        $('#pagination').bootstrapPaginator(options);
+      });
+    </script>
+    <header class="navbar navbar-static-top bs-docs-nav" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="main.html">iDelo</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="kaebused.html">Kaebused</a></li>
+            </ul>
+            <form class="navbar-form col-md-6 col-md-offset-3" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Kirjuta siia julgelt">
+              </div>
+              <button type="submit" class="btn btn-default searching">Otsi</button>
+            </form> 
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Seaded</b></a></li>
+              <li><a href="log_in.html">Logi välja</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="jumbotron jumbo">
+      <div class="container">
+        <h1>Kaebused</h1>       
+      </div>  
+    </div>
+    <div class="container col-md-8 col-md-offset-1">
+      <div class="row" role="main">
+        <div class="media">
+          <img class="media-object pull-left" src="http://f.pmo.ee/f/2012/07/30/1243762t81h4323.jpg" alt="...">
+          <a class="no-decoration" href="#">
+            <div class="media-body">
+              <h4 class="media-heading">Tööinspektsioon sai mullu 17 kaebust ebavõrdse kohtlemise kohta</h4>
+              Kuuel korral kaebaja nõuet ei rahuldatud, kolmel korral menetlus lõpetati. Kaebus rahuldati viiel korral. Osaliselt rahuldati nõue ühel korral ning üks nõue on endiselt menetluses. Näiteks leidis eelmisel aastal leidis aset juhtum, kus pärast nelja ja poole aasta pikkust lapsehoolduspuhkust tööle naasnud inimene koondati samal päeval. Inimene pöördus töövaidluskomisjoni poole, et seal tuvastataks, kas teda on sooliselt diskrimineeritud lapsevanemaks olemise ning perekondlike kohustuste täitmise tõttu.
+            </div>
+          </a>
+        </div>
+        <div class="media">
+          <img class="media-object pull-left" src="http://f.pmo.ee/f/2014/02/11/2814614t100h7c61.jpg" alt="...">
+          <a class="no-decoration" href="#">
+            <div class="media-body">
+              <h4 class="media-heading">Lugejat ehmatas Maksimarketis müügil olev juust</h4>
+              Tartu Tarbijate Kooperatiiv on pöördunud tootja poole, et saada nendepoolne selgitus, kinnitas Lember, kes ühtlasi palus vabandust ka tarbija ees ning palus edaspidi ebakvaliteetse kauba leidmisest teavitada kaupluse personali. Eesti Juustu tootja Estover selgitas, et müügiesindaja külastas kauplust ning toimetas praaktoote ettevõtteni.
+            </div>
+           </a>
+        </div>
+        <div class="media">
+          <img class="media-object pull-left" src="http://f.pmo.ee/f/2013/03/19/1645870t81hfd08.jpg" alt="...">
+          <a class="no-decoration" href="#">
+            <div class="media-body">
+              <h4 class="media-heading">Kümme Itaalia delikatessi, mida välismaalased ei suuda süüa</h4>
+              Paljud turistid peavad Itaalia kööki peamiseks riigi külastamise põhjuseks, kuid mitte kõik sealsed hõrgutised ei sobi nõrganärvilistele välismaalastele. Tuntud Itaalia köögi lemmikute kõrval võid menüüs kohata toite, mida sa ei tunne ja võib-olla on parem, kui sa ka ei küsi nende kohta, kirjutab The Local.
+            </div>
+          </a>
+        </div>
+        <div class="media">
+          <img class="media-object pull-left" src="http://f.pmo.ee/f/2010/05/31/377328t81hb021.jpg" alt="...">
+          <a class="no-decoration" href="#">
+            <div class="media-body">
+              <h4 class="media-heading">Ettepanek: suvilasse sissemurdmine peaks jääma kuriteoks</h4>
+              Linde ütles Postimehele, et kui tulevikus poleks maamajadesse ja suvilatesse sissemurdmine ja sealt kuni 200 euro väärtuses varastamine või lõhkumine enam kriminaalkorras karistav kuritegu, ei oleks see ühiskonnale hea signaal. See vähendaks omanike seas õiguskindlust ja looks kurjategijatele ettekujutuse, et nad võivad asja uurimisel kergemini pääseda. See ei oleks õige, lausus ta.
+            </div>
+          </a>
+        </div>
+        <div class="row col-md-6 col-md-offset-3">
+          <div id="pagination"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
