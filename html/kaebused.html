@@ -12,8 +12,12 @@
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){ 
-      $(".table").tablesorter(); 
-    }); 
+      $(".table").tablesorter();
+      $('.search-box').val('');
+    });
+    $('.searching').on('click', function(){
+
+    });
     </script>
     <header class="navbar navbar-static-top bs-docs-nav" role="banner">
       <div class="container">
@@ -24,8 +28,8 @@
          <div class="collapse navbar-collapse">
            <ul class="nav navbar-nav">
              <li><a href="kaebused.html">Kaebused</a></li>
-             <li><a href="kasutaja_kaebused.html">Minu esitatud kaebused</a></li>
-           </ul>
+             <li><a href="lisa_kaebus.html">Lisa uus kaebus</a></li>
+           </ul> 
            <ul class="nav navbar-nav navbar-right">
              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Seaded</b></a></li>
              <li><a href="log_in.html">Logi välja</a></li>
@@ -36,11 +40,19 @@
     </header>
     <div class="jumbotron">
       <div class="container">
-        <h1>Kaebealused</h1>       
+        <h1>Minu esitatud kaebused</h1>       
       </div>  
     </div>
     <div class="bs-docs-header" id="content">
-      <div class="container col-md-10 col-md-offset-1">
+      <div class="container">
+        <form class="navbar-form col-md-6 col-md-offset-3" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control search-box" placeholder="Kirjuta siia julgelt">
+          </div>
+          <a class="btn btn-default searching" href="otsing.html">Otsi</a>
+        </form>
+      </div>
+      <div class="container col-md-10 col-md-offset-1"> 
         <div class="table-responsive">
           <table class="table tablesorter">
             <thead>
@@ -52,18 +64,18 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="">Juku Kask</a></td>
-                <td><a href="">Pritsis veega</a></td>
+                <td><a href="citizen.html">Juku Kask</a></td>
+                <td><a href="kaebus.html">Pritsis veega</a></td>
                 <td>Raske kuritegu</td>
               </tr>
               <tr>
-                <td><a href="">Mari Mets</a></td>
-                <td>Sõi vales kohas võileiba</td>
+                <td><a href="citizen.html">Mari Mets</a></td>
+                <td><a href="kaebus.html">Sõi vales kohas võileiba</a></td>
                 <td>Märkus</td>
               </tr>
               <tr>
-                <td><a href="">Miina Meri</a></td>
-                <td>Istus kivi otsas</td>
+                <td><a href="citizen.html">Miina Meri</a></td>
+                <td><a href="">Istus kivi otsas</a></td>
                 <td>Pisikene  kuritegu</td>
               </tr>
             </tbody>
