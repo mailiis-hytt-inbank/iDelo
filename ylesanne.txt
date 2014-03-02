@@ -1,0 +1,4 @@
+registreerimine
+sisse logimine
+nimekiri - kaebused mis sisseloginud kasutaja on teinud
+konkreetse kodaniku vaade - sisseloginud kasutaja kohta esitatud laebused - profiil

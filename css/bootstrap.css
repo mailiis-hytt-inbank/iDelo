@@ -193,7 +193,7 @@ th {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -276,7 +276,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #000;
+  color: rgb(55, 62, 68);
   background-color: #fff;
 }
 input,
@@ -294,7 +294,7 @@ a {
 a:hover,
 a:focus {
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -2049,7 +2049,7 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   color: #000;
-  background-color: #ebebeb;
+  background-color: #fff;
   border-color: #adadad;
 }
 .btn-default:active,
@@ -3464,7 +3464,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #fff;
 }
 .nav > li.disabled > a {
   color: #999;
@@ -3957,7 +3957,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000;
+  color: rgb(94, 94, 94);
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -4955,7 +4955,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
   color: #000;
-  background-color: #f5f5f5;
+  background-color: rgb(248, 248, 248);
   border-color: #ddd;
 }
 .panel-default > .panel-heading + .panel-collapse .panel-body {

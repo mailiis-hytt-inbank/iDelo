@@ -4,97 +4,57 @@
     <meta charset="utf-8">
     <title>iDelo</title>
     <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/css.css" rel="stylesheet">
   </head>
   <body>
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
-    <script type="text/javascript">
-      $(function(){
-        $('input').val(null);
-        $.validator.setDefaults({
-          debug: true,
-          success: "valid"
-        });
-        $('.registration-form').validate({
-          rules: {
-            password: {
-              required: true,
-              minlength: 5
-            },
-            confirm_password: {
-              required: true,
-              minlength: 5,
-              equalTo: "#password"
-            },
-            email: {
-              required: true,
-              email: true
-            }, 
-          },
-          messages: {
-            email: "Palun sisalda korrektne e-maili aadress",
-            password: {
-              required: "Palun sisesta parool",
-              minlength: "Parool peab vähemalt 5 tähte pikk olema" 
-            },
-            confirm_password: {
-              required: "Palun sisesta parooli kordus",
-              equalTo: "Ei ole sama mis parool"
-            }
-          },
-          invalidHandler: function(event, validator) {
-            // 'this' refers to the form
-            var errors = validator.numberOfInvalids();
-            if (errors) {
-              var message = errors == 1
-              ? 'You missed 1 field. It has been highlighted'
-              : 'You missed ' + errors + ' fields. They have been highlighted';
-              console.log(message);
-              $("div.error").show();
-            } else {
-              $("div.error").hide();
-            }
-          }
-        });
-      });
-    </script>
-    <div class="bs-header" id="content" style="margin: 5%"/>
+    <script src="../js/form-validation.js"></script>
+    <header class="navbar navbar-default navbar-static-top bs-docs-nav" role="banner">
+      <div class="container">
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+         <div class="collapse navbar-collapse">
+           <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html">Logi sisse</a></li>
+           </ul>
+         </div>
+        </nav>
+      </div>
+    </header>
     <div class="container bs-docs-container">
       <div class="row">
         <div class="col-sm-offset-2 col-sm-8">
-          <form class="form-horizontal registration-form" role="form">
-            <div class="form-group col-sm-8">
-              <label for="inputEmail3" class="col-sm-3 control-label">E-mail</label>
+          <form class="form-horizontal registration-form" action="main.html" method="post" role="form">
+            <div class="form-group col-sm-8 has-feedback">
+              <label for="email" class="col-sm-3 control-label">E-mail</label>
               <div class="col-sm-9">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="example@example.com" name="email" required>
+                <input type="email" class="form-control" id="email" placeholder="example@example.com" name="email" required>
+                <span></span>
               </div>
             </div>
-            <div class="form-group col-sm-8">
+            <div class="form-group col-sm-8 has-feedback">
               <label for="password" class="col-sm-3 control-label">Parool</label>
               <div class="col-sm-9">
                 <input type="password" class="form-control" id="password" name="password" required>
+                <span></span>
               </div>
             </div>
             <div class="form-group col-sm-8 has-feedback">
               <label for="confirm-password" class="control-label col-sm-3">Parooli kordus</label>
               <div class="col-sm-9">
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
-                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                <span></span>
               </div>
             </div>
             <div class="form-group col-sm-8">
-              <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default registrate">Registreeri</button>
+              <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-default">Registreeri</button>
               </div>
             </div>
           </form>
-          <div class="error"></div>
         </div>
       </div>
     </div>
   </body>
 </html>
-
-<!--  has-success has-feedback  -->
