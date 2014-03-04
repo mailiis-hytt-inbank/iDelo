@@ -5,15 +5,21 @@
   <head>
     <meta charset="utf-8">
     <title>iDelo</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-image-gallery.min.css">
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/css.css" rel="stylesheet">
+  </head>
+  <body>
     <script src="../js/jquery-2.1.0.min.js"></script>
+    <script src="../js/complaint.js"></script>
     <script src="../js/jquery.tablesorter.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="../js/map.js"></script>
+    <script src="../js/map.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="../js/bootstrap-image-gallery.min.js"></script>
     <header class="navbar navbar-default navbar-static-top bs-docs-nav" role="banner">
       <div class="container">
         <div class="navbar-header">
@@ -46,13 +52,48 @@
           <p>Tüüp: märkus</p>
           <p>Kellaeg: 14:36:45</p>
           <p>Kirjeldus: Läksin lõunapausile ja nägin ühte tüdrukut. Tal oli seljas pruun pluus, teksad ja tennised. Juuksed on tal pruunid, silmad sinised. Mõtlesin, et miks ta koolis pole. Nägin kuidas ta kotist võttis võileiva välja. Siis nägin aga silti, mis keelab võileibu süüa. Otsustasin, et sellisest korrarikkumisest peavad Moldaavia inimesed teadma saama. Tegin oma telefoniga paar pilti, ja panin need siia üles.</p>
-          <div>
-             <img class="guilty-pics" src="http://media3.onsugar.com/files/2013/03/13/5/2415/24155406/c2ce7b07c52a8eab_girl_eating_sandwich_shutter.xxxlarge.jpg">
-             <img class="guilty-pics" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR6Hmthv_QpC9GnrFZrrvRvzhrDYRknDAoLHvmXOLJXUCjSQyG0"> 
-          </div>
         </div>
         <div class="col-md-6">
           <div id="map_canvas"></div> 
+        </div>
+        <div class="container">
+          <div class="row margin-top">
+            <div id="blueimp-gallery" class="blueimp-gallery">
+                <div class="slides"></div>
+                <div class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4></h4>
+                      </div>
+                      <div class="modal-body next"></div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                          Previous
+                        </button>
+                        <button type="button" class="btn btn-default next">
+                          Next
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="links">
+              <a href="http://media3.onsugar.com/files/2013/03/13/5/2415/24155406/c2ce7b07c52a8eab_girl_eating_sandwich_shutter.xxxlarge.jpg" data-gallery>
+                <img src="http://media3.onsugar.com/files/2013/03/13/5/2415/24155406/c2ce7b07c52a8eab_girl_eating_sandwich_shutter.xxxlarge.jpg" alt="First" title="First image" class="gallery-image"/>
+              </a>
+              <a href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR6Hmthv_QpC9GnrFZrrvRvzhrDYRknDAoLHvmXOLJXUCjSQyG0" data-gallery>
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR6Hmthv_QpC9GnrFZrrvRvzhrDYRknDAoLHvmXOLJXUCjSQyG0" alt="Second" title="Second image" class="gallery-image"/>
+              </a>
+              <a href="http://topfoodfacts.com/wp-content/uploads/2013/05/sandwich.jpg" data-gallery>
+                <img src="http://topfoodfacts.com/wp-content/uploads/2013/05/sandwich.jpg" alt="First" title="First image" class="gallery-image"/>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
