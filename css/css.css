@@ -29,11 +29,25 @@
 .search {
   margin-bottom: 2%;
 }
-.gallery-image{
+.gallery-image {
   max-width:15%;
 }
 .bar {
   height: 18px;
   background: green;
+}
+.no-border > thead > tr > th,
+.no-border > tbody > tr > td{
+  border: 0 !important;
+}
+th.header.headerSortUp > span { 
+  display: inline-block;
+  transform: rotate(180deg);
+}
 
+th.header.headerSortDown > span{ 
+  display: inline-block;
+}
+th.header > span{
+  display: none;
 }

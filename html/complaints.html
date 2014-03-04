@@ -4,15 +4,35 @@
   <head>
     <meta charset="utf-8">
     <title>iDelo</title>
-  </head>
-  <body>
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/css.css" rel="stylesheet">
+  </head>
+  <body>
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.tablesorter.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
     <script src="../js/complaints.js"></script>
+    <script type="text/javascript">
+      // $(function(){
+      //   $('th').on('click', function(){
+      //     if($(this).hasClass('headerSortUp')){
+      //       sortUp($(this));
+            
+      //     }else if($(this).hasClass('headerSortDown')){
+      //       sortDown($(this));
+      //     }
+      //   });
+      // });
+      // var sortUp = function(element){
+      //   $('th').children('span').addClass('none');
+      //   element.children('span').removeClass('none').addClass('sortup');
+      // };
+      // var sortDown = function(element){
+      //   $('th').children('span').addClass('none');
+      //   element.children('span').removeClass('none');
+      // };
+    </script>
     <header class="navbar navbar-default navbar-static-top bs-docs-nav" role="banner">
       <div class="container">
         <div class="navbar-header">
@@ -52,35 +72,35 @@
           </form>
         </div>
         <div class="container table-responsive">
-          <table class="table table-striped tablesorter">
+          <table class="table table-striped tablesorter no-border">
             <thead>
               <tr>
-                <th style="border:0;">Kodaniku nimi</th>
-                <th style="border:0;">Kaebus</th>
-                <th style="border:0;">Tüüp</th>
+                <th>Kodaniku nimi<span class="caret"></span></th>
+                <th>Kaebus<span class="caret"></span></th>
+                <th>Tüüp<span class="caret"></span></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="border:0;"><a href="citizen.html">Juku Kask</a></td>
-                <td style="border:0;"><a href="complaint.html">Pritsis veega</a></td>
-                <td style="border:0;">
+                <td><a href="citizen.html">Juku Kask</a></td>
+                <td><a href="complaint.html">Pritsis veega</a></td>
+                <td>
                   <span class="glyphicon glyphicon-stop" style="color:#D9534F"></span>
                   Raske kuritegu
                 </td>
               </tr>
               <tr>
-                <td style="border:0;"><a href="citizen.html">Mari Mets</a></td>
-                <td style="border:0;"><a href="complaint.html">Sõi vales kohas võileiba</a></td>
-                <td style="border:0;">
+                <td><a href="citizen.html">Mari Mets</a></td>
+                <td><a href="complaint.html">Sõi vales kohas võileiba</a></td>
+                <td>
                   <span class="glyphicon glyphicon-stop" style="color:#5BC0DE"></span>
                   Märkus
                 </td>
               </tr>
               <tr>
-                <td style="border:0;"><a href="citizen.html">Miina Meri</a></td>
-                <td style="border:0;"><a href="">Istus kivi otsas</a></td>
-                <td style="border:0;">
+                <td><a href="citizen.html">Miina Meri</a></td>
+                <td><a href="">Istus kivi otsas</a></td>
+                <td>
                   <span class="glyphicon glyphicon-stop" style="color:#5CB85C"></span>
                   Pisikene kuritegu
                 </td>

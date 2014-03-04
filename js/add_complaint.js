@@ -1,4 +1,8 @@
+$('body').append(' <script src="../js/jquery.ui.widget.js"></script> <script src="../js/jquery.fileupload.js"></script><script src="../js/load-image.min.js"></script><script src="../js/jquery.fileupload-process.js"></script><script src="../js/jquery.fileupload-image.js"></script>');
 $(function(){
+  $(document).on('click','.btn.btn-primary',function() {
+    return false;
+  });
   $('.new-complaint').validate({
     rules: {
       name: {
