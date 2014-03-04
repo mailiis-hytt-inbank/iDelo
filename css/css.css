@@ -32,3 +32,8 @@
 .gallery-image{
   max-width:15%;
 }
+.bar {
+  height: 18px;
+  background: green;
+
+}
