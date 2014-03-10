@@ -64,7 +64,7 @@ $(function(){
       $(element).parent().removeClass('has-error').addClass(validClass);  
     },
     success: function(label) {
-      label.addClass('hidden-label');
+      label.removeClass('error').addClass('hidden-label');
     }
   });
 });
