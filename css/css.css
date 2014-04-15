@@ -10,13 +10,12 @@
   height: 400px;
 }
 .guilty-pics {
-  max-width: 300px;
+  max-width: 200px;
   /*max-height: 160px;*/
 }
 .padding-bottom {
   padding-bottom: 5%;
 }
-
 .margin-top {
   margin-top: 1%;
 }
@@ -44,10 +43,25 @@ th.header.headerSortUp > span {
   display: inline-block;
   transform: rotate(180deg);
 }
-
 th.header.headerSortDown > span{ 
   display: inline-block;
 }
 th.header > span{
   display: none;
+}
+.gray-search{
+  color: rgb(119, 119, 119);
+}
+.main-heading{
+  color: rgb(55, 62, 68) !important;
+  font-weight: 600;
+}
+.main-body{
+  color: rgb(55, 62, 68) !important;
+}
+.login{
+  margin-top: 40px;
+}
+.caret-pointer{
+  cursor: default;
 }

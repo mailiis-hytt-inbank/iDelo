@@ -6,73 +6,45 @@
     <title>iDelo</title>
     <link href="../css/bootstrap.css" rel="stylesheet"/>
     <link href="../css/css.css" rel="stylesheet">
-  </head>
-  <body>
+
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.tablesorter.min.js"></script>
-    <header class="navbar navbar-default navbar-static-top bs-docs-nav" role="banner">
+    <script src="../js/handlebars.js"></script>
+    <script src="../js/helpers.js"></script>
+    <script src="../js/templates.js"></script>
+    <script src="../js/main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="main.html">iDelo</a>
         </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="complaints.html">Kaebused</a></li>
-              <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="searching" href="search.html"><span class="glyphicon glyphicon-search icon-rotate icon-flipped"></span></a></li>
-              <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
-              <li><a href="login.html">Logi välja</a></li>
-            </ul>
-          </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="complaints.html">Kaebused</a></li>
+            <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="searching" href="search.html">Otsing</span></a></li>
+            <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
+            <li><a href="login.html">Logi välja</a></li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
     <div class="container">
       <div class="page-header">
         <h1>Viimase päeva jooksul esitatud kaebused</h1>
       </div>
     </div>
-    <div class="container">
-      <a href="complaint.html">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4>Pritsis veega</h4>
-          </div>
-          <div class="panel-body">
-            <p>
-              Mina jalutasin siis oma kodutänaval ja siis see tüdruk pesi voolikuga autot. Tema mind ei näinud ja ta pritsis mind. See oli küll tahtmatu tegu aga siiski temavanused noored neiud peaksid ikka ettevaatlikumad olema. 
-            </p>
-          </div>
-        </div>
-      </a>
-      <a href="complaint.html">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4>Sõi vales kohas võileiba</h4>
-          </div>
-          <div class="panel-body">
-            <p>
-              Läksin lõunapausile ja nägin ühte tüdrukut. Tal oli seljas pruun pluus, teksad ja tennised. Juuksed on tal pruunid, silmad sinised. Mõtlesin, et miks ta koolis pole. Nägin kuidas ta kotist võttis võileiva välja. Siis nägin aga silti, mis keelab võileibu süüa. Otsustasin, et sellisest korrarikkumisest peavad Moldaavia inimesed teadma saama. Tegin oma telefoniga paar pilti, ja panin need siia üles.
-            </p>
-          </div>
-        </div>
-      </a>
-      <a href="complaint.html">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4>Istus kivi otsas</h4>
-          </div>
-          <div class="panel-body">
-            <p>
-              Läksin kooli hommikul ja nägin kuidas üks tüdruk lihtsalt istus kivi otsas ja ei teinud mitte midagi.
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
+    <div class="container main-container"></div>
   </body>
 </html>

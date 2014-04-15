@@ -2,3 +2,16 @@ registreerimine
 sisse logimine
 nimekiri - kaebused mis sisseloginud kasutaja on teinud
 konkreetse kodaniku vaade - sisseloginud kasutaja kohta esitatud laebused - profiil
+
+
+
+
+tee kudiagi nähtavamaks see maini pealkirjad
+
+näita olemasolevate tüüpide listi
+
+uue lisamisel näita lisa nuppu ka üleval 
+
+vaadete pealkirjad ülespoole
+
+tabeli juures muuda kursorit

@@ -6,56 +6,54 @@
     <title>iDelo</title>
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/css.css" rel="stylesheet">
-  </head>
-  <body>
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.tablesorter.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
     <script src="../js/complaints.js"></script>
-    <header class="navbar navbar-default navbar-static-top bs-docs-nav" role="banner">
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="main.html">iDelo</a>
         </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="complaints.html">Kaebused</a></li>
-              <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
-              <li><a href="add_type.html">Lisa uus tüüp</a></li>
-            </ul> 
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="searching" href="search.html"><span class="glyphicon glyphicon-search icon-rotate icon-flipped"></span></a></li>
-              <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
-              <li><a href="login.html">Logi välja</a></li>
-            </ul>
-          </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="complaints.html">Kaebused</a></li>
+            <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
+            <li><a href="add_type.html">Lisa uus tüüp</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="searching" href="search.html">Otsing</span></a></li>
+            <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
+            <li><a href="login.html">Logi välja</a></li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
     <div class="container">
       <div class="page-header">
-        <h1>Minu esitatud kaebused</h1>
+        <h1>Kaebused</h1>
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="container">
-          <form class="navbar-form pull-right show-by-type">
+          <form class="navbar-form col-md-12 pull-right show-by-type">
             <select class="form-control type-select">
               <option selected disabled>Vali tüüp</option>
               <option>Märkus</option>
               <option>Raske kuritegu</option>
               <option>Pisikene kuritegu</option>
             </select>
-            <button class="btn btn-default by-type" id="tere" >Näita</button>
-          </form>
-          <form class="navbar-form col-md-6 col-md-offset-3" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control search-box" placeholder="Kirjuta siia julgelt">
-            </div>
-            <a class="btn btn-default searching" href="otsing.html">Otsi</a>
+            <button class="btn btn-default by-type">Näita</button>
           </form>
         </div>
         <div class="container table-responsive">
