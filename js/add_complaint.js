@@ -44,7 +44,19 @@ $(function(){
       var theTemplateScript = Templates.current_types;  
        var theTemplate = Handlebars.compile(theTemplateScript);  
       $('.current-types').append(theTemplate(rows));
-      $('.current-types-select').attr('name', "type")
+      $('.current-types-select').attr('name', "type");
+    }
+  });
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost/cgi-bin/iDelo/get_citizens.py',
+    dataType: 'json',
+    success: function(data){
+      var rows = {rows: data};
+      var theTemplateScript = Templates.current_citizens;  
+       var theTemplate = Handlebars.compile(theTemplateScript);  
+      $('.current-citizens').append(theTemplate(rows));
+      $('.current-citizens-select').attr('name', "citizen");
     }
   });
   $('.add-field').on('click', function(e){
@@ -58,7 +70,13 @@ $(function(){
     $(this).parent('.form-group').remove();
   });
   $('.registrate').on('click', function(e){
-    even.preventDefault();
-    
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost/cgi-bin/iDelo/add_complaint.py?id='+getUserIdAdmin()[0]+"&"+$('.new-complaint').serialize(),
+      success: function(data){
+        window.location.href = "complaint.html?id="+data;
+      }
+    });
   })
 });

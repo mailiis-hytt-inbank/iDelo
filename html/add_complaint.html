@@ -15,6 +15,10 @@
     <script src="../js/handlebars.js"></script>
     <script src="../js/helpers.js"></script>
     <script src="../js/templates.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/sessionHelp.js"></script>
+    <script src="../js/checklogin.js"></script>
     <script src="../js/add_complaint.js"></script>  
   </head>
   <body>
@@ -31,13 +35,13 @@
           <a class="navbar-brand" href="main.html">iDelo</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav left-list">
             <li><a href="complaints.html">Kaebused</a></li>
             <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="searching" href="search.html">Otsing</span></a></li>
-            <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
+            <li class="citizen-link"><a href="citizens.html">Kodanikud</b></a></li>
             <li><a href="login.html">Logi välja</a></li>
           </ul>
         </div>
@@ -54,26 +58,21 @@
           <div class="col-sm-8">
             <div class="form-group">
               <label for="name" class="col-sm-2 control-label">Süüaluse nimi</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" name="name" placeholder="Süüaluse nimi" id="name" required/>
-                <span></span>
-              </div>
+              <div class="col-sm-10 current-citizens"></div>
             </div>
             <div class="form-group">
-              <label for="crime" class="col-sm-2 control-label">Kuritegu</label>
+              <label for="name" class="col-sm-2 control-label">Kuritegu</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="crime" placeholder="Kuritegu"/>
+                <input type="text" class="form-control" name="name" placeholder="Kuritegu"/>
                 <span></span>
               </div>
             </div>
             <div class="form-group">
               <label for="type" class="col-sm-2 control-label">Kuriteo tüüp</label>
-              <div class="col-sm-10 current-types">
-                <span></span>
-              </div>
+              <div class="col-sm-10 current-types"></div>
             </div>
             <div class="form-group">
-              <label for="spec" class="col-sm-2 control-label">Kirjeldus</label>
+              <label for="content" class="col-sm-2 control-label">Kirjeldus</label>
               <div class="col-sm-10">
                 <textarea rows="3" class="form-control" name="content"></textarea>
                 <span></span>
@@ -85,7 +84,7 @@
                 <div class=" col-sm-8">
                   <input type="text" class="new-field-data form-control">
                 </div>
-                <button class="btn btn-default add-field">Add</button>
+                <button class="btn btn-default add-field">Lisa pilt</button>
               </div>
             </div>
             <div class="form-group">

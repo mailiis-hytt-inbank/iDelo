@@ -15,29 +15,48 @@ Templates.difficulties = [
 Templates.current_types = [
   "<select class='form-control current-types-select'>",
     "{{#each rows}}",
-      "<option>{{this}}</option>",
+      "<option value='{{this.[0]}}'>{{this.[1]}}</option>",
+    "{{/each}}",
+  "</select>"
+].join('\n')
+
+Templates.current_citizens = [
+  "<select class='form-control current-citizens-select'>",
+    "{{#each rows}}",
+      "<option value='{{this.[0]}}'>{{this.[1]}}</option>",
     "{{/each}}",
   "</select>"
 ].join('\n')
 
 Templates.main = [
   "{{#each rows}}",
-    "<div class='panel panel-default' data-id='{{this.[0]}}'>",
-      "<div class='panel-heading'>",
-        "<h4 class=' main-heading'>",
-          "{{this.[2]}}",
-        "</h4>",
+    "<a href='complaint.html?id={{this.[0]}}'>",
+      "<div class='panel panel-default' data-id='{{this.[0]}}'>",
+        "<div class='panel-heading'>",
+          "<h4 class=' main-heading'>",
+            "{{this.[2]}}",
+          "</h4>",
+        "</div>",
+        "<div class='panel-body main-body'>",
+          "<p>",
+            "{{this.[1]}}",
+          "</p>",
+        "</div>",
       "</div>",
-      "<div class='panel-body main-body'>",
-        "<p>",
-          "{{this.[1]}}",
-        "</p>",
-      "</div>",
-    "</div>",
-  "{{/each}}",
+    "</a>", 
+  "{{/each}}"
 ].join('\n')
 
 Templates.complaints_table = [
+  "<table class='table table-striped tablesorter no-border'>",
+    "<thead>",
+      "<tr>",
+        "<th class='caret-pointer'>Kodaniku nimi<span class='caret'></span></th>",
+        "<th class='caret-pointer'>Kaebus<span class='caret'></span></th>",
+        "<th class='caret-pointer'>Tüüp<span class='caret'></span></th>",
+      "</tr>",
+    "</thead>",
+    "<tbody class='tbody'>",
       "{{#each rows}}",
         "<tr>",
           "<td><a href='citizen.html?id={{this.[2].[1]}}'>{{this.[2].[0]}}</a></td>",
@@ -47,7 +66,10 @@ Templates.complaints_table = [
             "{{this.[3]}}",
           "</td>",
         "</tr>", 
-      "{{/each}}"
+      "{{/each}}",
+    "</tbody>",
+  "</table>"
+      
 ].join('\n')
 
 Templates.complaint_show = [
@@ -120,5 +142,13 @@ Templates.citizen = [
         "</div>",
       "{{/each}}",
     "</div>",
-  "</div>",
+  "</div>"
+].join('\n')
+
+Templates.citizens = [
+  "<ul class='list-unstyled'>",
+    "{{#each rows}}",
+      "<li><a href='citizen.html?id={{this.[0]}}'><h4>{{this.[1]}}</h4></li>",
+    "{{/each}}",
+  "</ul>"
 ].join('\n')

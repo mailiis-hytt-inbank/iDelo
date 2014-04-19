@@ -9,6 +9,10 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
     <script src="../js/form-validation.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/sessionHelp.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/registration.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -43,9 +47,16 @@
                 <span></span>
               </div>
             </div>
+            <div class="form-group col-sm-8 has-feedback">
+              <label for="name" class="col-sm-3 control-label">Nimi</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" placeholder="Mari Mets" name="name" required>
+                <span></span>
+              </div>
+            </div>
             <div class="form-group col-sm-8">
               <div class="col-sm-offset-3 col-sm-9">
-                <button type="submit" class="btn btn-default">Registreeri</button>
+                <button type="submit" class="btn btn-default registrate">Registreeri</button>
               </div>
             </div>
           </form>

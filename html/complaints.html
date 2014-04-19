@@ -13,6 +13,10 @@
     <script src="../js/handlebars.js"></script>
     <script src="../js/helpers.js"></script>
     <script src="../js/templates.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/sessionHelp.js"></script>
+    <script src="../js/checklogin.js"></script>
     <script src="../js/complaints.js"></script>
   </head>
   <body>
@@ -28,13 +32,13 @@
           <a class="navbar-brand" href="main.html">iDelo</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav left-list">
             <li><a href="complaints.html">Kaebused</a></li>
             <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="searching" href="search.html">Otsing</span></a></li>
-            <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
+            <li class="citizen-link"><a href="citizens.html">Kodanikud</b></a></li>
             <li><a href="login.html">Logi välja</a></li>
           </ul>
         </div>
@@ -42,23 +46,12 @@
     </nav>
     <div class="container">
       <div class="page-header">
-        <h1>Minu esitatud kaebused</h1>
+        <h1 class="header">Minu esitatud kaebused</h1>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="container table-responsive">
-          <table class="table table-striped tablesorter no-border">
-            <thead>
-              <tr>
-                <th class="caret-pointer">Kodaniku nimi<span class="caret"></span></th>
-                <th class="caret-pointer">Kaebus<span class="caret"></span></th>
-                <th class="caret-pointer">Tüüp<span class="caret"></span></th>
-              </tr>
-            </thead>
-            <tbody class="tbody"></tbody>
-          </table>
-        </div>
+        <div class="container main-container table-responsive"></div>
       </div>
     </div>
   </body>

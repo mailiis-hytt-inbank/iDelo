@@ -20,10 +20,7 @@ $(function(){
 
 
   google.maps.event.addListener(marker, 'dragend', function(evt){
-    // TODO: on submit get coordinates
-    console.log(evt.latLng.lat());
     $('.latitude').val(evt.latLng.lat());
-    console.log(evt.latLng.lng());
     $('.longtitude').val(evt.latLng.lng());
 
 });

@@ -6,9 +6,12 @@
     <title>iDelo</title>
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/css.css" rel="stylesheet">
+    <link href="../css/jquery-ui.min.css" rel="stylesheet">
     <script src="../js/jquery-2.1.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/form-validation.js"></script>
     <script src="../js/handlebars.js"></script>
     <script src="../js/helpers.js"></script>
     <script src="../js/templates.js"></script>
@@ -16,7 +19,7 @@
     <script src="../js/session.js"></script>
     <script src="../js/sessionHelp.js"></script>
     <script src="../js/checklogin.js"></script>
-    <script src="../js/add_type.js"></script>
+    <script src="../js/add_citizen.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -45,33 +48,52 @@
     </nav>
     <div class="container">
       <div class="page-header">
-        <h1>Uus tüüp</h1>
+        <h1>Uus kodanik</h1>
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form class="form-horizontal new-type" role="form">
+          <form class="form-horizontal new-citizen" role="form">
             <div class="form-group">
-              <label for="name" class="col-sm-3 control-label">Tüübi nimetus</label>
+              <label for="name" class="col-sm-3 control-label">Kodaniku nimi</label>
               <div class="col-sm-9 has-feedback" >
-                <input type="text" class="form-control" name="name" placeholder="Tüüp" id="complaint_type" required>
+                <input type="text" class="form-control" name="name" placeholder="Mari mets" id="name" required>
                 <span></span>
               </div>
             </div>
-            <div class="form-group difficulties">
-              <label for="difficulty_id" class="col-sm-3 control-label">Raskusaste</label>
+            <div class="form-group">
+              <label for="image_url" class="col-sm-3 control-label">Pildi url</label>
+              <div class="col-sm-9 has-feedback" >
+                <input type="text" class="form-control" name="image_url" placeholder="www.image.com/image.jpg" id="image_url" required>
+                <span></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="sex" class="col-sm-3 control-label">Sugu</label>
+              <div class="col-sm-9">
+                <select name="sex" class="form-control">
+                  <option>Mees</option>
+                  <option>Naine</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="birth_date" class="col-sm-3 control-label">Sünnikuupäev</label>
+              <div class="col-sm-9 has-feedback" style="float: left;">
+                <input type="text" class="form-control" name="birth_date" id="datepicker" required>
+              </div>
             </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary add_type">Lisa tüüp</button>
+                <button type="submit" class="btn btn-primary add_citizen">Lisa kodanik</button>
               </div>
             </div>
           </form>
         </div>
         <div class="col-md-6">
-          <label for="complaint_type" class="col-sm-3 control-label">Olemasolevad tüübid</label>
-          <div class="col-sm-9 current-types"></div>
+          <label for="current_citizens_select" class="col-sm-3 control-label">Kodanikud andmebaasis</label>
+          <div class="col-sm-9 current-citizens"></div>
         </div>
       </div>
     </div>

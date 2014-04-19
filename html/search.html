@@ -8,6 +8,13 @@
     <link href="../css/css.css" rel="stylesheet">
     <script src="../js/jquery-2.1.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/handlebars.js"></script>
+    <script src="../js/helpers.js"></script>
+    <script src="../js/templates.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/sessionHelp.js"></script>
+    <script src="../js/checklogin.js"></script>
     <script src="../js/search.js"></script>
   </head>
   <body>
@@ -23,13 +30,13 @@
           <a class="navbar-brand" href="main.html">iDelo</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav left-list">
             <li><a href="complaints.html">Kaebused</a></li>
             <li><a href="add_complaint.html">Lisa uus kaebus</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="searching" href="search.html">Otsing</span></a></li>
-            <li class="dropdown"><a href="profile.html">Profiil</b></a></li>
+            <li class="citizen-link"><a href="citizens.html">Kodanikud</b></a></li>
             <li><a href="login.html">Logi välja</a></li>
           </ul>
         </div>
@@ -43,53 +50,16 @@
     <div class="container">
       <div class="row">
         <div class="container">
-          <form>
+          <form class="search-form">
             <div class="input-group search">
-              <input type="text" class="form-control search-box">
+              <input type="text" name="search" class="form-control search-box">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search icon-rotate icon-flipped gray-search"></span></button>
+                <button class="btn btn-default search-button" type="button"><span class="glyphicon glyphicon-search icon-rotate icon-flipped gray-search"></span></button>
               </span>
             </div>  
           </form>
         </div>
-        <div class="container">
-          <a href="complaint.html">
-            <div class="panel panel-default">
-              <div class="panel-heading main-heading">
-                Pritsis veega
-              </div>
-              <div class="panel-body main-body">
-                <p>
-                  Mina jalutasin siis oma kodutänaval ja siis see tüdruk pesi voolikuga autot. Tema mind ei näinud ja ta pritsis mind. See oli küll tahtmatu tegu aga siiski temavanused noored neiud peaksid ikka ettevaatlikumad olema. 
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="complaint.html">
-            <div class="panel panel-default">
-              <div class="panel-heading main-heading">
-                Sõi vales kohas võileiba
-              </div>
-              <div class="panel-body main-body">
-                <p>
-                  Läksin lõunapausile ja nägin ühte tüdrukut. Tal oli seljas pruun pluus, teksad ja tennised. Juuksed on tal pruunid, silmad sinised. Mõtlesin, et miks ta koolis pole. Nägin kuidas ta kotist võttis võileiva välja. Siis nägin aga silti, mis keelab võileibu süüa. Otsustasin, et sellisest korrarikkumisest peavad Moldaavia inimesed teadma saama. Tegin oma telefoniga paar pilti, ja panin need siia üles.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="complaint.html">
-            <div class="panel panel-default">
-              <div class="panel-heading main-heading">
-                Istus kivi otsas
-              </div>
-              <div class="panel-body main-body">
-                <p>
-                  Läksin kooli hommikul ja nägin kuidas üks tüdruk lihtsalt istus kivi otsas ja ei teinud mitte midagi.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+        <div class="container main-container"></div>
       </div>
     </div>
   </body>
